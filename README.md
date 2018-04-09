@@ -37,6 +37,7 @@ Auto setup
 Additional imports
 * Import theme for iTerm called `Solarized Dark theme` [ https://gist.github.com/kevin-smets/8568070 ]. Just go iTerm → preferences → profiles → colors → load presets.
 * Import `profile-config.json` in your profiles in iTerm, this step will override your window settings, so be aware
+* Customize `.zshrc` and `.zshenv` to your needs..
 * Test if everything is working correctly, run command `exec zsh` and reopen iTerm
 
 ---

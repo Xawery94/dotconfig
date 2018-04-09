@@ -14,7 +14,7 @@ export KUBE_AGNOSTER_CTX_MAP="minikube green:minikube *mysmartcontrol-test* yell
 
 export GOPATH="${HOME}/Documents/projekty/go"
 export PYENV_ROOT="/usr/var/local/pyenv"
-export ANDROID_SDK_PATH="/Users/kjanik/Library/Android/sdk/platform-tools"
+export ANDROID_SDK_PATH="${HOME}/Library/Android/sdk/platform-tools"
 
 export PATH="${PATH}:${GOPATH}/bin:${ANDROID_SDK_PATH}"
 
