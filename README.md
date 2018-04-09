@@ -1,7 +1,14 @@
 
-# iTerm2  install guide
+# iTerm2 & zsh installation guide
 ---
-## How to instal iTerm2
+
+## Example
+
+![Alt text](/iterm-example.png?raw=true "Screenshot")
+
+---
+
+## How to install iTerm2
 ### macOS
 Download iTerm from web [ https://www.iterm2.com/ ] or using Homebrew 
 ```
