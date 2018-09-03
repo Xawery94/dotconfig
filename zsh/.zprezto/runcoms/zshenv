@@ -10,13 +10,15 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export KUBE_AGNOSTER_CTX_MAP="minikube green:minikube *mysmartcontrol-test* yellow:test *mysmartcontrol-1209* red:prod"
+export KUBE_AGNOSTER_CTX_MAP="minikube green:minikube *mysmartcontrol-test*bigos green:bigos *mysmartcontrol-test*cluster-1 yellow:sushi *mysmartcontrol-1209* red:prod *smartace*dev green:smartace-dev"
 
 export GOPATH="${HOME}/Documents/projekty/go"
 export PYENV_ROOT="/usr/var/local/pyenv"
 export ANDROID_SDK_PATH="${HOME}/Library/Android/sdk/platform-tools"
+export FLUTTER="${HOME}/Documents/Flutter"
 
 export PATH="${PATH}:${GOPATH}/bin:${ANDROID_SDK_PATH}"
 
 export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH=${FLUTTER}/flutter/bin:${PATH}
 
