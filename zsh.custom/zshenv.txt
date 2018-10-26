@@ -19,3 +19,42 @@ export ANDROID_SDK_PATH="/Users/kjanik/Library/Android/sdk/platform-tools"
 export PATH="${PATH}:${GOPATH}/bin:${ANDROID_SDK_PATH}"
 
 export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+
+
+#
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+export KUBE_AGNOSTER_CTX_MAP="minikube green:minikube *mysmartcontrol-test*bigos green:bigos *mysmartcontrol-test*cluster-1 yellow:sushi *mysmartcontrol-1209* red:prod *smartace*dev green:smartace-dev"
+export PYENV_ROOT="/usr/var/local/pyenv"
+
+if [[ -d "${HOME}/Documents/Flutter" ]]; then
+  export FLUTTER="${HOME}/Documents/Flutter"
+  export PATH="${PATH}:${FLUTTER}/flutter/bin"
+fi
+
+if [[ -d "${HOME}/Library/Android/sdk/platform-tools" ]]; then
+  export ANDROID_SDK_PATH="${HOME}/Library/Android/sdk/platform-tools"
+  export PATH="${PATH}:${ANDROID_SDK_PATH}"
+fi
+
+if [[ -d "${HOME}/.pub-cache/bin" ]]; then
+  export PATH="${PATH}:${HOME}/.pub-cache/bin"
+fi
+
+if [[ -d "${HOME}/.jenv/bin" ]]; then
+  export JENV="${HOME}/.jenv/bin"
+  export PATH="${PATH}:${JENV}"
+
+  eval Ò$(jenv init -)Ó
+fi
+
+export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
