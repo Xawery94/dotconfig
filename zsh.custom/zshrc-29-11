@@ -1,0 +1,30 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+if [[ $+commands[vim] ]]; then
+  alias vi=vim
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '${HOME}/Documents/GCloud/google-cloud-sdk/path.zsh.inc' ]; then source '${HOME}/Documents/GCloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '${HOME}/Documents/GCloud/google-cloud-sdk/completion.zsh.inc' ]; then source '${HOME}/Documents/GCloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [[ $+commands[ccat] ]]; then
+  alias cat=ccat
+fi
+
+source <(kubectl completion zsh)
