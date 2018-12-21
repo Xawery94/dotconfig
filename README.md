@@ -1,4 +1,3 @@
-
 # iTerm2 & zsh installation guide
 ---
 
@@ -15,14 +14,35 @@ Download iTerm from web [ https://www.iterm2.com/ ] or using Homebrew
 brew cask install iterm2
 ```
 
-## How to install zsh
+## How to install ZSH
 ### macOS
 Try zsh --version before installing it from Homebrew. If it's newer than 4.3.9 you might be OK. Preferably newer than or equal to 5.0.
 ```
 brew install zsh zsh-completions
 ```
 
-Also install Prezto — Instantly Awesome Zsh [ https://github.com/sorin-ionescu/prezto ]
+## Install FiraCode Fonts
+- Download: [ https://github.com/tonsky/FiraCode/releases/download/1.206/FiraCode_1.206.zip ]
+
+- How to install: [ https://github.com/tonsky/FiraCode/wiki ]
+
+## ZSH config:
+Clone repo and then copy zsh to .config
+
+## After that you can configure your ZSH
+ZSH needs to ZDOTDIR to work properly, so you need to create file zshenv in /etc directory, just run this command:
+```
+sudo echo 'export ZDOTDIR=${HOME}/.config/zsh' > /etc/zshenv
+```
+After you need to add zsh to your shells:
+```
+sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+```
+Last ste is to change your default shell to ZSH:
+```
+chsh -s /usr/local/bin/zsh
+exec zsh
+```
 
 ---
 ## Installing iTerm2 tools and plugins
@@ -32,7 +52,6 @@ Auto setup
 * Optionally, backup your existing `~/.config/zsh` [`cp ~/.config/zsh ~/.config/zsh.backup`] before changes
 * Override folder `zsh`
 * Run command `exec zsh`
-* If all is ok set your default terminal to zhs [ `chsh -s /bin/zsh` ]
 
 Additional imports
 * Import theme for iTerm called `Solarized Dark theme` [ https://gist.github.com/kevin-smets/8568070 ]. Just go iTerm → preferences → profiles → colors → load presets.
@@ -47,3 +66,6 @@ If you want to have fancy `cat` command look, just install `ccat` from Homebrew
 ```
 brew install ccat
 ```
+
+Optional step
+Also install Prezto — Instantly Awesome Zsh [ https://github.com/sorin-ionescu/prezto ]
