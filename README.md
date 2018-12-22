@@ -32,7 +32,7 @@ Clone repo and then copy zsh to .config
 ## After that you can configure your ZSH
 ZSH needs to ZDOTDIR to work properly, so you need to create file zshenv in /etc directory, just run this command:
 ```
-sudo echo 'export ZDOTDIR=${HOME}/.config/zsh' > /etc/zshenv
+sudo sh -c echo 'export ZDOTDIR=${HOME}/.config/zsh' > /etc/zshenv
 ```
 After you need to add zsh to your shells:
 ```
