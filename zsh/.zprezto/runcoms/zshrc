@@ -27,4 +27,21 @@ if [[ $+commands[ccat] ]]; then
   alias cat=ccat
 fi
 
+if [[ $+commands[kubectl] ]]; then
+  alias kgp="kubectl get pod"
+  alias kgs="kubectl get svc"
+  alias kgl="kubectl logs -f"
+  alias kctledit="kubectl edit deployments.apps"
+  alias kdlt="kubectl delete pod"
+fi
+
+if [[ $+commands[docker-compose] ]]; then
+  alias dcd="docker-compose down"
+  alias dcud="docker-compose up -d"
+  alias dc-remove="docker-compose rm -sf"
+  alias dcl="docker-compose logs -f"
+  alias dcps="docker-compose ps"
+  alias dcr="docker-compose down && docker-compose up -d --build"
+fi
+
 source <(kubectl completion zsh)
