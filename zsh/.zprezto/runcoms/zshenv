@@ -10,6 +10,12 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_12_HOME=$(/usr/libexec/java_home -v12)
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java12='export JAVA_HOME=$JAVA_12_HOME'
+
 export KUBE_AGNOSTER_CTX_MAP="minikube green:minikube *mysmartcontrol-test*bigos green:bigos *mysmartcontrol-test*cluster-1 white:sushi *mysmartcontrol-1209* red:prod *smartace-223409*cluster-1 green:smartace-dev"
 
 export PYENV_ROOT="/usr/var/local/pyenv"
@@ -26,6 +32,11 @@ fi
 
 if [[ -d "${HOME}/.pub-cache" ]]; then
   export PATH="${PATH}:${HOME}/.pub-cache/bin"
+fi
+
+if [[ -d "${HOME}/go" ]]; then
+  export GOPATH="${HOME}/go/bin"
+  export PATH="${PATH}:${GOPATH}"
 fi
 
 if [[ -d "${HOME}/.jenv/bin" ]]; then
