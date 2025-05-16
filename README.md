@@ -71,9 +71,8 @@ Optional step
 Also install Prezto — Instantly Awesome Zsh [ https://github.com/sorin-ionescu/prezto ]
 
 
-
-
-
+## How to install
+```
 Install iTerm2
 Brew install zsh
 Install oh-my-zsh. (Optional)
@@ -84,3 +83,4 @@ sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
 chsh -s /usr/local/bin/zsh
 exec zsh
 Enjoy!!
+```
