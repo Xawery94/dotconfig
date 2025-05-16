@@ -69,3 +69,18 @@ brew install ccat
 
 Optional step
 Also install Prezto — Instantly Awesome Zsh [ https://github.com/sorin-ionescu/prezto ]
+
+
+
+
+
+Install iTerm2
+Brew install zsh
+Install oh-my-zsh. (Optional)
+Install fira-code (font)
+Clone repo from git zsh to .config
+sudo echo 'export ZDOTDIR=${HOME}/.config/zsh' > /etc/zshenv
+sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+chsh -s /usr/local/bin/zsh
+exec zsh
+Enjoy!!
